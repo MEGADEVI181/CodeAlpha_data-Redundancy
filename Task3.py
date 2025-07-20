@@ -24,7 +24,7 @@ def home():
         route = request.form["route"]
         date = request.form["date"]
         tickets.insert_one({"name": name, "route": route, "date": date})
-        return "✅ Ticket Booked"
+        return " Ticket Booked"
     return render_template_string(html)
 
 app.run()
