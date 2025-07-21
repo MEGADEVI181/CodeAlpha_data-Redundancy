@@ -7,7 +7,7 @@ client = MongoClient("your_mongodb_connection_string")
 db = client["bus_db"]
 tickets = db["bookings"]
 
-html = "
+html = """
 <h2>Book Bus Ticket</h2>
 <form method='POST'>
 Name: <input name='name'><br><br>
@@ -15,7 +15,7 @@ Route: <input name='route'><br><br>
 Date: <input type='date' name='date'><br><br>
 <input type='submit'>
 </form>
-"
+"""
 
 @app.route("/", methods=["GET", "POST"])
 def home():
